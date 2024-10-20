@@ -15,22 +15,22 @@
 		font-family: 'Arial', sans-serif; /* Thay đổi phông chữ */
 }
 
-.pronunciation-container {
+.phonetics-container {
     display: flex; /* Sắp xếp các phần tử bên trong theo hàng */
     justify-content: center; /* Căn giữa các phần tử */
     width: 100%; /* Đảm bảo chúng chiếm toàn bộ chiều rộng */
 		font-weight: bold;
-		
+		font-size: 18px;		
 }
 .sound-container {
     display: flex; /* Sắp xếp các phần tử bên trong theo hàng */
 		font-weight: bold;
 }
 .jq-audio-player1 {
-		margin: 0px 132px;
+		margin: 0px 125px;
 }
 .section-meaning {
-		width: 150px;
+		width: 220px;
 		height: 30px;
 		border: 3px solid black; /* Đường viền cho từng ô */
     border-radius: 10px; /* Bo tròn góc cho từng ô */
@@ -39,6 +39,7 @@
 		background-color: #fff;
 		display: flex;
 		margin: auto auto;
+		font-size: 18px;
 }
 .section-pronunciation {
 		font-weight: bold;
@@ -51,6 +52,7 @@
     align-items: center;
     background-color: #fff; /* Màu nền cho từng ô */
     margin: 7px 10px; /* Khoảng cách giữa hai ô */
+		font-size: 18px;
 }
 
 .jq-audio-player {
@@ -60,12 +62,12 @@
 }
 .section-example {
     width: 400px; /* Chiều rộng cố định */
-    height: 35px; /* Chiều cao cố định */
+    height: 40px; /* Chiều cao cố định */
 		border: 3px solid black; /* Đường viền cho phần ví dụ */
     border-radius: 10px; /* Bo tròn góc */
     background-color: #fff; /* Màu nền cho phần ví dụ */
     padding: 7px; /* Padding bên trong */
-    font-size: 15px; /* Kích thước chữ */
+    font-size: 18px; /* Kích thước chữ */
     color: #333; /* Màu chữ */
     align-items: center;
 		text-align: center; /* Căn giữa văn bản */
@@ -77,8 +79,8 @@
 }
 
 .section-word {
-    width: 150px;
-    height: 80px;
+    width: 140px;
+    height: 76px;
 		font-weight: bold;
     margin: 0 auto 0px; /* Giảm khoảng cách dưới section-word */
     border: 3px solid black; /* Đường viền cho từng phần */
@@ -88,16 +90,7 @@
     align-items: center;
     background-color: #fff; /* Màu nền cho từng phần */
     padding: 0px;
-}
-
-
-.section-sound {
-    display: flex; /* Sử dụng flexbox để căn giữa các phần tử */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    justify-content: space-between; /* Khoảng cách giữa các phần tử */
-    padding: 10px 0; /* Padding trên và dưới */
-    margin: 2px auto; /* Căn giữa khung âm thanh */
-		
+		font-size: 20px;
 }
 
 .section-image {

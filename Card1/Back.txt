@@ -2,15 +2,15 @@
 <div class="custom-frame">
     <div class="word-pronun">
         <div class="section-word">{{Word}}</div>
-        <div class="pronunciation-container">
-            <div class="section-pronunciation uk">{{Pronunciation}}</div>
-            <div class="section-pronunciation us">{{Pronunciation}}</div>
+        <div class="phonetics-container">
+            <div class="section-pronunciation uk">{{UK Phonetics}}</div>
+            <div class="section-pronunciation us">{{US Phonetics}}</div>
         </div>
     </div>
     <div class="sound-container">
         <div class="jq-audio-player1">
-            <audio data-text="{{Word}}" data-lang="en-US" autoplay="">
-                <source src="https://dict.youdao.com/dictvoice?audio={{Word}}&amp;type=1">
+            <audio>
+                <source src="{{Pronunciation UK}}">
             </audio>
             <span class="jq-audio-btn audio-btn">
                 <span class="fa fa-volume-up" style="font-size:18px"></span>
@@ -18,8 +18,8 @@
             <span class="font-1 font-400">UK</span>
         </div>
         <div class="jq-audio-player2">
-            <audio data-text="{{Word}}" data-lang="en-US" preload="none">
-            <source src="https://dict.youdao.com/dictvoice?audio={{Word}}&amp;type=2&amp;v=1725337713912">
+            <audio>
+            <source src="{{Pronunciation US}}">
             </audio>
             <span class="jq-audio-btn audio-btn">
                 <span class="fa fa-volume-up" style="font-size:18px"></span>
@@ -28,7 +28,6 @@
         </div>
     </div>
     <div class="section-example">{{Example}}</div>
-    
     <div class="section-image">
         <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2023/7/25/1220914/Rose.jpg" alt="Image" />
     </div>
