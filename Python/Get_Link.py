@@ -6,7 +6,7 @@ import pandas as pd
 # Hàm lấy link phát âm từ Oxford Learner's Dictionaries
 def get_pronunciation_a_phonetics_links(word):
     base_url = "https://www.oxfordlearnersdictionaries.com/definition/english/"
-    url = base_url + word
+    url = base_url + word.lower()
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
@@ -57,7 +57,7 @@ def get_pronunciation_a_phonetics_links(word):
 
 
 # Hàm thêm từ vào Anki với link phát âm
-def add_note_to_anki(word, example, meaning, uk_pronunciation, us_pronunciation, uk_phonetics, us_phonetics):
+def add_note_to_anki(word, example, meaning, pronunciation_lst, phonetics_lst, desk):
     anki_connect_url = 'http://localhost:8765'
     
     note = {
@@ -65,14 +65,14 @@ def add_note_to_anki(word, example, meaning, uk_pronunciation, us_pronunciation,
         "version": 6,
         "params": {
             "note": {
-                "deckName": "Default",  # Tên của deck bạn muốn thêm thẻ vào
+                "deckName": desk,  # Tên của deck bạn muốn thêm thẻ vào
                 "modelName": "Basic",   # Mô hình thẻ có các trường tùy chỉnh
                 "fields": {
                     "Word": word.lower(),
-                    "Pronunciation UK": uk_pronunciation,
-                    "Pronunciation US": us_pronunciation,
-                    "UK Phonetics": uk_phonetics,
-                    "US Phonetics": us_phonetics,
+                    "Pronunciation UK": pronunciation_lst[0],
+                    "Pronunciation US": pronunciation_lst[1],
+                    "UK Phonetics": phonetics_lst[0],
+                    "US Phonetics": phonetics_lst[1],
                     "Example": example,
                     "Back": meaning
                 }
@@ -99,7 +99,7 @@ def main():
         print(f"********_______{word}_______********")
         pronunciation_lst, phonetics_lst = get_pronunciation_a_phonetics_links(word)
 
-        result = add_note_to_anki(word, example, meaning, pronunciation_lst[0], pronunciation_lst[1], phonetics_lst[0], phonetics_lst[1])
+        result = add_note_to_anki(word, example, meaning, pronunciation_lst, phonetics_lst, "Self-Learning")
 
         if result['error'] is None:
             print(f"Adding new word successfully!!")
