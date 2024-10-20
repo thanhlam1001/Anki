@@ -1,0 +1,125 @@
+.custom-frame {
+    width: 480px;
+    height: 450px;
+    border: 5px solid black;
+    border-radius: 20px; /* Bo tròn góc */
+    background-color: pink; /* Màu nền */
+    position: absolute; /* Để căn giữa */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa khung */
+    display: grid;
+    grid-template-rows: auto auto 1fr; /* Tự động cho các hàng, cho không gian còn lại */
+    gap: 10px; /* Khoảng cách giữa các phần */
+    padding: 10px; /* Padding cho khung */
+		font-family: 'Arial', sans-serif; /* Thay đổi phông chữ */
+}
+
+.pronunciation-container {
+    display: flex; /* Sắp xếp các phần tử bên trong theo hàng */
+    justify-content: center; /* Căn giữa các phần tử */
+    width: 100%; /* Đảm bảo chúng chiếm toàn bộ chiều rộng */
+		font-weight: bold;
+		
+}
+.sound-container {
+    display: flex; /* Sắp xếp các phần tử bên trong theo hàng */
+		font-weight: bold;
+}
+.jq-audio-player1 {
+		margin: 0px 132px;
+}
+.section-meaning {
+		width: 150px;
+		height: 30px;
+		border: 3px solid black; /* Đường viền cho từng ô */
+    border-radius: 10px; /* Bo tròn góc cho từng ô */
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		display: flex;
+		margin: auto auto;
+}
+.section-pronunciation {
+		font-weight: bold;
+    width: 150px; /* Chiều rộng của từng ô */
+    height: 30px;
+    border: 3px solid black; /* Đường viền cho từng ô */
+    border-radius: 10px; /* Bo tròn góc cho từng ô */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Màu nền cho từng ô */
+    margin: 7px 10px; /* Khoảng cách giữa hai ô */
+}
+
+.jq-audio-player {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử bên trong */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin: 0 10px; /* Khoảng cách giữa các âm thanh */
+}
+.section-example {
+    width: 400px; /* Chiều rộng cố định */
+    height: 35px; /* Chiều cao cố định */
+		border: 3px solid black; /* Đường viền cho phần ví dụ */
+    border-radius: 10px; /* Bo tròn góc */
+    background-color: #fff; /* Màu nền cho phần ví dụ */
+    padding: 7px; /* Padding bên trong */
+    font-size: 15px; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+    align-items: center;
+		text-align: center; /* Căn giữa văn bản */
+    margin: auto auto; /* Căn giữa khung và khoảng cách phía trên/dưới */
+    overflow: visible; /* Hiển thị toàn bộ nội dung mà không cuộn */
+    overflow-wrap: break-word; /* Ngắt từ khi cần thiết */
+    word-wrap: break-word; /* Ngắt từ trong trường hợp cần */
+		margin: 0px auto; 
+}
+
+.section-word {
+    width: 150px;
+    height: 80px;
+		font-weight: bold;
+    margin: 0 auto 0px; /* Giảm khoảng cách dưới section-word */
+    border: 3px solid black; /* Đường viền cho từng phần */
+    border-radius: 10px; /* Bo tròn góc cho từng phần */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Màu nền cho từng phần */
+    padding: 0px;
+}
+
+
+.section-sound {
+    display: flex; /* Sử dụng flexbox để căn giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Khoảng cách giữa các phần tử */
+    padding: 10px 0; /* Padding trên và dưới */
+    margin: 2px auto; /* Căn giữa khung âm thanh */
+		
+}
+
+.section-image {
+    width: 300px; /* Chiều rộng cố định */
+    height: 150px; /* Chiều cao cố định */
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    justify-content: center; /* Căn giữa hình ảnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin: 0px auto; /* Giảm khoảng cách trên và dưới */
+    border: 3px solid black; /* Đường viền cho phần hình ảnh */
+    border-radius: 10px; /* Bo tròn góc cho phần hình ảnh */
+    overflow: hidden; /* Giấu nội dung vượt quá khung */
+		margin: 0px auto;
+}
+
+.audio-btn {
+    cursor: pointer; /* Con trỏ trở thành bàn tay khi di chuột qua */
+    margin-right: 5px; /* Khoảng cách giữa nút và văn bản */
+}
+
+.font-1 {
+    margin-left: 5px; /* Khoảng cách giữa nút âm thanh và văn bản */
+    font-size: 14px; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+}
